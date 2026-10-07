@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Świat Jamników 🐾</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff8ef;
+      color: #3b2418;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #7b3f00, #d97706);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #3b2418;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #fbbf24;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 35px;
+      color: #7b3f00;
+    }
+
+    .hero-card {
+      max-width: 850px;
+      margin: -40px auto 0;
+      position: relative;
+      background: white;
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+      text-align: center;
+    }
+
+    .dog {
+      font-size: 6rem;
+      margin-bottom: 10px;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .fact {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+      transition: transform .2s;
+    }
+
+    .fact:hover {
+      transform: translateY(-5px);
+    }
+
+    .fact .icon {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .fact h3 {
+      color: #d97706;
+      margin-bottom: 8px;
+    }
+
+    .about {
+      background: #fff;
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    .quiz {
+      background: #7b3f00;
+      color: white;
+      border-radius: 25px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .quiz h2 {
+      color: white;
+    }
+
+    button {
+      border: none;
+      background: #fbbf24;
+      color: #3b2418;
+      padding: 14px 25px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #f59e0b;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      min-height: 30px;
+    }
+
+    footer {
+      background: #3b2418;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: inline-block;
+        margin: 5px 8px;
+        font-size: .9rem;
+      }
+
+      .about,
+      .quiz {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🐶 Świat Jamników</h1>
+    <p>
+      Mały pies, wielka osobowość! Poznaj jedną z najbardziej
+      charakterystycznych ras psów.
+    </p>
+  </header>
+
+  <nav>
+    <a href="#o-jamnikach">O rasie</a>
+    <a href="#ciekawostki">Ciekawostki</a>
+    <a href="#charakter">Charakter</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+
+  <section id="o-jamnikach">
+    <div class="hero-card">
+      <div class="dog">🐕</div>
+      <h2>Jamnik – pies o wyjątkowej sylwetce</h2>
+      <p>
+        Jamniki są niewielkimi psami o charakterystycznym długim tułowiu
+        i krótkich łapach. Są energiczne, odważne, inteligentne
+        i często mają bardzo silny charakter.
+      </p>
+    </div>
+  </section>
+
+  <section id="ciekawostki">
+    <h2>🐾 Ciekawostki o jamnikach</h2>
+
+    <div class="facts">
+
+      <div class="fact">
+        <div class="icon">📏</div>
+        <h3>Długi tułów</h3>
+        <p>
+          Ich charakterystyczna sylwetka sprawia, że jamniki są
+          łatwe do rozpoznania niemal wszędzie.
+        </p>
+      </div>
+
+      <div class="fact">
+        <div class="icon">🧠</div>
+        <h3>Inteligentne</h3>
+        <p>
+          Jamniki szybko uczą się nowych rzeczy, choć potrafią być
+          również bardzo uparte.
+        </p>
+      </div>
+
+      <div class="fact">
+        <div class="icon">❤️</div>
+        <h3>Przywiązane</h3>
+        <p>
+          Zwykle mocno przywiązują się do swoich opiekunów
+          i lubią spędzać z nimi czas.
+        </p>
+      </div>
+
+      <div class="fact">
+        <div class="icon">⚡</div>
+        <h3>Pełne energii</h3>
+        <p>
+          Pomimo niewielkich rozmiarów jamniki potrafią być
+          bardzo aktywne i ciekawskie.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="charakter">
+    <div class="about">
+      <h2>🐶 Jaki jest jamnik?</h2>
+
+      <p>
+        Jamnik to pies odważny, ciekawski i pełen energii.
+        Został wyhodowany między innymi do pracy w polowaniu,
+        dlatego może mieć silny instynkt łowiecki.
+      </p>
+
+      <br>
+
+      <p>
+        W domu często jest wesołym i przywiązanym towarzyszem.
+        Warto jednak pamiętać, że jamniki potrzebują odpowiedniej
+        dawki ruchu, zabawy i konsekwentnego wychowania.
+      </p>
+
+      <br>
+
+      <p>
+        Ze względu na charakterystyczną budowę ciała należy również
+        szczególnie dbać o ich kręgosłup i unikać sytuacji,
+        które nadmiernie go obciążają.
+      </p>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <div class="quiz">
+      <h2>🎯 Czy znasz jamniki?</h2>
+
+      <p>
+        Kliknij przycisk i sprawdź swoją wiedzę!
+      </p>
+
+      <button onclick="startQuiz()">Rozpocznij quiz</button>
+
+      <div id="result"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>🐾 Stworzone z miłości do jamników 🐾</p>
+    <p>© 2026 Świat Jamników</p>
+  </footer>
+
+  <script>
+    function startQuiz() {
+      const answer = prompt(
+        "Quiz 🐶\n\n" +
+        "Dlaczego jamniki mają tak charakterystyczną sylwetkę?\n\n" +
+        "A) Jest to cecha ich rasy\n" +
+        "B) Wszystkie psy rodzą się takie\n" +
+        "C) To efekt treningu"
+      );
+
+      const result = document.getElementById("result");
+
+      if (answer && answer.toLowerCase() === "a") {
+        result.textContent = "🎉 Brawo! Odpowiedź A jest poprawna!";
+      } else {
+        result.textContent = "🐾 Prawidłowa odpowiedź to A. Spróbuj jeszcze raz!";
+      }
+    }
+  </script>
+
+</body>
+</html>
